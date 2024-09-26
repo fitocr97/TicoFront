@@ -1,0 +1,39 @@
+#btn-log{
+    margin-right: 4px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #d1f2eb ;
+}
+main {
+    flex: 1;
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container-log {
+    width: 50%;
+    max-width: 60%;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: #aedace; /* Fondo blanco con transparencia */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(233, 232, 232, 0.1);
+}
+    
+
