@@ -5,7 +5,7 @@ function checkAuthToken() {
 
     if (!token) {
         alert("No tienes acceso. Por favor, inicia sesión.");
-        window.location.href = 'login.html';
+        window.location.href = '/login.html';
     } else {
         console.log("Acceso concedido, token encontrado.");
     }
