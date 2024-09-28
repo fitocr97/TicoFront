@@ -34,9 +34,23 @@
         </div>
     </nav>
 
-
-        <main >
-        </main>
+    <main>
+      <h2>Productos Enviados</h2>
+      <table class="table table-primary">
+        <thead class="color-orange">
+          <tr>
+            <th scope="col">Codigo Contenedor</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Lugar Entrega</th>
+            <th scope="col">Fecha Salida</th>
+          </tr>
+        </thead>
+        <tbody id="clientUsersTableBody">
+          <!-- Aquí se llenará la tabla dinámicamente -->
+        </tbody>
+      </table>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -44,6 +58,49 @@
             <p>&copy; 2024 Tico Frut. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const token = localStorage.getItem('token'); // Asegúrate de que el token esté almacenado
+      const url = 'http://localhost:3000/tico/v1/shipments/';
+
+      axios.get(url, {
+        headers: {
+          'Authorization': `Bearer ${token}` // Pasando el Bearer Token en el header
+        }
+      })
+      .then(response => {
+        console.log(response.data.msg)
+        const users = response.data.msg; // Asumiendo que la respuesta es una lista de usuarios
+        const tableBody = document.getElementById('clientUsersTableBody');
+        
+        // Limpiamos el contenido de la tabla por si ya tiene datos
+        tableBody.innerHTML = '';
+
+        // Iteramos sobre la lista de usuarios
+        users.forEach(user => {
+          // Creamos una nueva fila
+          const row = document.createElement('tr');
+          
+          // Agregamos celdas a la fila con los datos de cada usuario
+          row.innerHTML = `
+            <td>${user.container}</td>
+            <td>${user.amount}</td>
+             <td>${user.product_name}</td>
+            <td>${user.location}</td>
+            <td>${user.departure_date}</td>
+
+          `;
+
+          // Agregamos la fila al cuerpo de la tabla
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error('Error al hacer la solicitud:', error);
+      });
+    </script>
 
    <!-- Cargar scripts -->
    <script src="/js/auth.js"></script>

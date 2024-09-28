@@ -37,3 +37,7 @@ footer {
 }
     
 
+thead {
+    background-color: #007bff !important; /* Cambia el color a lo que necesites */
+    color: white !important; /* Cambia el color del texto si es necesario */
+}
