@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 async function cargarProductos() {
     try {
         const token = localStorage.getItem('token'); // Asegúrate de tener el token almacenado
-        const url = 'http://localhost:3000/tico/v1/products/'; // Cambia esta URL por la correcta
+        const url = 'https://ticoapi-production.up.railway.app/tico/v1/products/'; // Cambia esta URL por la correcta
         const response = await axios.get(url, {
             headers: {
                 'Authorization': `Bearer ${token}`

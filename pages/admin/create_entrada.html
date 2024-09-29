@@ -48,14 +48,15 @@
                 
                 <h2 style="margin-top: 1%;">Agreagar Nueva Entrada de Producto</h2> 
                 <div>
-                  <label for="exampleSelect1" class="form-label mt-4">Proveedor</label>
-                  <select class="form-select" id="tipos_productos">
+                  <label for="tipos_proveedores" class="form-label mt-4">Proveedor</label>
+                  <select class="form-select" id="tipos_proveedores" name="tipos_proveedores">
+                      <!-- Aquí se llenarán las opciones de proveedores dinámicamente -->
                   </select>
-                </div>
-                <div>
+              </div>
+              <div>
                   <label for="producto" class="form-label mt-4">Producto</label>
-                  <input type="text" class="form-control" name="producto" aria-describedby="producto" disabled >
-                </div>
+                  <input type="text" class="form-control" name="producto" aria-describedby="producto" disabled>
+              </div>
                 <div>
                   <label for="name" class="form-label mt-4">Cantidad</label>
                   <input type="text" class="form-control" name="cantidad" aria-describedby="cantidad" placeholder="Cantidad">
@@ -78,6 +79,9 @@
     </footer>
 
     <!-- Cargar scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios desde un CDN -->
+    <script src="/js/cargar_proveedor.js"></script> 
+    <script src="/js/entrada.js"></script>
     <script src="/js/auth.js"></script>
     <script src="/js/logout.js"></script> 
     <script>
