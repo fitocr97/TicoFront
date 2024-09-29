@@ -16,7 +16,7 @@ function checkAuthToken() {
             console.log("Iniciando solicitud de login...");
             
             // Enviar la solicitud POST a la API
-            const response = await axios.post('http://localhost:3000/tico/v1/users/login', {
+            const response = await axios.post('https://ticoapi-production.up.railway.app/tico/v1/users/login', {
                 email,
                 password
             });

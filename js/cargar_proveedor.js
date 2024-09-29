@@ -11,14 +11,14 @@ async function cargarProveedoresYProductos() {
         const token = localStorage.getItem('token');
         
         // Cargar proveedores
-        const urlProveedores = 'http://localhost:3000/tico/v1/suppliers/'; // Cambia esta URL por la correcta
+        const urlProveedores = 'https://ticoapi-production.up.railway.app/tico/v1/suppliers/'; // Cambia esta URL por la correcta
         const responseProveedores = await axios.get(urlProveedores, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         proveedores = responseProveedores.data.msg;; // Almacena los proveedores
 
         // Cargar productos
-        const urlProductos = 'http://localhost:3000/tico/v1/products/'; // Cambia esta URL por la correcta
+        const urlProductos = 'https://ticoapi-production.up.railway.app/tico/v1/products/'; // Cambia esta URL por la correcta
         const responseProductos = await axios.get(urlProductos, {
             headers: { 'Authorization': `Bearer ${token}` }
         });

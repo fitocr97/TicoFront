@@ -26,7 +26,7 @@ function crearEntrada() {
             console.log("Creando proveedor...");
             
             const token = localStorage.getItem('token'); // Asegúrate de que el token esté almacenado
-            const url = 'http://localhost:3000/tico/v1/entries/create';
+            const url = 'https://ticoapi-production.up.railway.app/tico/v1/entries/create';
 
             // Realizar la solicitud POST con Axios
             const response = await axios.post(url, {

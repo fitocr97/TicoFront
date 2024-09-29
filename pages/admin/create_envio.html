@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Proveedor</title>
+    <title>Crear Envio</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/web/icon.png" type="image/png">
@@ -49,16 +49,16 @@
                 <h2 style="margin-top: 1%;">Envio de Producto</h2> 
                 <div>
                     <label for="name" class="form-label mt-4">Codigo Contenedor</label>
-                    <input type="text" class="form-control" name="Contenedor" aria-describedby="contenedor" placeholder="Codigo Contenedor">
+                    <input type="text" class="form-control" name="contenedor" aria-describedby="contenedor" placeholder="Codigo Contenedor">
                 </div>
                 <div>
                   <label for="exampleSelect1" class="form-label mt-4">Producto</label>
-                  <select class="form-select" id="tipos_productos">
+                  <select class="form-select" id="tipos_productos" name="producto_id">
                   </select>
                 </div>
                 <div>
                     <label for="Cantidad" class="form-label mt-4">Cantidad</label>
-                    <input type="text" class="form-control" name="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
+                    <input type="text" class="form-control" name="cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
                 </div>
                 <div>
                     <label for="name" class="form-label mt-4">Lugar de entrega</label>
@@ -82,6 +82,9 @@
     </footer>
 
     <!-- Cargar scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios desde un CDN -->
+    <script src="/js/cargar_prod.js"></script> 
+    <script src="/js/envio.js"></script>
     <script src="/js/auth.js"></script>
     <script src="/js/logout.js"></script> 
     <script>
