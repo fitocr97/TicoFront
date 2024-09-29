@@ -53,14 +53,14 @@
                 </div>
                 <div>
                     <label for="exampleSelect1" class="form-label mt-4">Tipo</label>
-                    <select class="form-select" id="tipos_productos">
-                      <option>Interno</option>
-                      <option>Externo</option>
+                    <select class="form-select" id="tipo" name="tipo">
+                      <option value="Interno">Interno</option>
+                      <option value="Externo">Externo</option>
                     </select>
                 </div>
                 <div>
                     <label for="exampleSelect1" class="form-label mt-4">Producto</label>
-                    <select class="form-select" id="tipos_productos">
+                    <select class="form-select" id="tipos_productos" name="producto_id">
                     </select>
                 </div>
                 <div>
@@ -73,7 +73,7 @@
                 </div>
                 <div>
                     <label for="Telefono" class="form-label mt-4">Telefono</label>
-                    <input type="text" class="form-control" name="Telefono" aria-describedby="Telefono" placeholder="Telefono">
+                    <input type="text" class="form-control" name="telefono" aria-describedby="telefono" placeholder="Telefono">
                 </div>
                 <div style="margin-top: 2%;">
                     <div style="margin-top: 1%;">
@@ -92,6 +92,9 @@
     </footer>
 
     <!-- Cargar scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios desde un CDN -->
+    <script src="/js/cargar_prod.js"></script> 
+    <script src="/js/proveedor.js"></script> 
     <script src="/js/auth.js"></script>
     <script src="/js/logout.js"></script> 
     <script>
