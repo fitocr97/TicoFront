@@ -43,10 +43,8 @@
     </nav>
 
     <main>
-            
-        </div>
         <div class="container-log">
-            <form id="createProduct">
+            <form id="createEnvio">
                 
                 <h2 style="margin-top: 1%;">Envio de Producto</h2> 
                 <div>
@@ -54,13 +52,13 @@
                     <input type="text" class="form-control" name="Contenedor" aria-describedby="contenedor" placeholder="Codigo Contenedor">
                 </div>
                 <div>
-                    <label for="Cantidad" class="form-label mt-4">Cantidad</label>
-                    <input type="text" class="form-control" name="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
+                  <label for="exampleSelect1" class="form-label mt-4">Producto</label>
+                  <select class="form-select" id="tipos_productos">
+                  </select>
                 </div>
                 <div>
-                    <label for="exampleSelect1" class="form-label mt-4">Producto</label>
-                    <select class="form-select" id="tipos_productos">
-                    </select>
+                    <label for="Cantidad" class="form-label mt-4">Cantidad</label>
+                    <input type="text" class="form-control" name="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
                 </div>
                 <div>
                     <label for="name" class="form-label mt-4">Lugar de entrega</label>
@@ -69,7 +67,7 @@
             
                 <div style="margin-top: 2%;">
                     <div style="margin-top: 1%;">
-                    <button type="submit" class="btn btn-primary">Agreagar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
                     <a id="btn-reg" class="btn btn-danger my-2 my-sm-0" href="/pages/admin/envios.html">Volver</a>
                 </div>
             </form>
@@ -88,8 +86,8 @@
     <script src="/js/logout.js"></script> 
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
-        //checkAuthToken();
-        //logoutFunc();
+        checkAuthToken();
+        logoutFunc();
     </script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

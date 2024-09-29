@@ -44,16 +44,18 @@
 
     <main>
         <div class="container-log">
-            <form id="createProduct">
+            <form id="createPrveedor">
                 
                 <h2 style="margin-top: 1%;">Agreagar Nuevo Proveedor</h2> 
                 <div>
-                    <label for="name" class="form-label mt-4">Nombre Proveedor</label>
-                    <input type="text" class="form-control" name="name" aria-describedby="name" placeholder="Nombre del producto">
+                    <label for="name" class="form-label mt-4">Nombre Empresa o Proveedor</label>
+                    <input type="text" class="form-control" name="name" aria-describedby="name" placeholder="Nombre de la empresa">
                 </div>
                 <div>
-                    <label for="exampleSelect1" class="form-label mt-4">tipo</label>
+                    <label for="exampleSelect1" class="form-label mt-4">Tipo</label>
                     <select class="form-select" id="tipos_productos">
+                      <option>Interno</option>
+                      <option>Externo</option>
                     </select>
                 </div>
                 <div>
@@ -75,8 +77,8 @@
                 </div>
                 <div style="margin-top: 2%;">
                     <div style="margin-top: 1%;">
-                    <button type="submit" class="btn btn-primary">Agreagar</button>
-                    <a id="btn-reg" class="btn btn-danger my-2 my-sm-0" href="/pages/admin/productos.html">Volver</a>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <a id="btn-reg" class="btn btn-danger my-2 my-sm-0" href="/pages/admin/proveedores.html">Volver</a>
                 </div>
             </form>
         </div>
@@ -94,8 +96,8 @@
     <script src="/js/logout.js"></script> 
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
-        //checkAuthToken();
-        //logoutFunc();
+        checkAuthToken();
+        logoutFunc();
     </script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

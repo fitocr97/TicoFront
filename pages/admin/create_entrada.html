@@ -43,21 +43,19 @@
     </nav>
 
     <main>
-        
-            
-        </div>
         <div class="container-log">
-            <form id="createProduct">
+            <form id="createEntrada">
                 
-                <h2 style="margin-top: 1%;">Agreagar Nuevo Entrada de Producto</h2> 
+                <h2 style="margin-top: 1%;">Agreagar Nueva Entrada de Producto</h2> 
                 <div>
-                    <label for="empresa" class="form-label mt-4">Nombre Empresa o proveedor</label>
-                    <input type="text" class="form-control" name="empresa" aria-describedby="empresa" placeholder="Nombre de la empresa o proveedor">
+                  <label for="exampleSelect1" class="form-label mt-4">Proveedor</label>
+                  <select class="form-select" id="tipos_productos">
+                  </select>
                 </div>
                 <div>
-                  <label for="producto" class="form-label mt-4">Nombre Empresa o proveedor</label>
-                  <input type="text" class="form-control" name="producto" aria-describedby="producto" disabled>
-              </div>
+                  <label for="producto" class="form-label mt-4">Producto</label>
+                  <input type="text" class="form-control" name="producto" aria-describedby="producto" disabled >
+                </div>
                 <div>
                   <label for="name" class="form-label mt-4">Cantidad</label>
                   <input type="text" class="form-control" name="cantidad" aria-describedby="cantidad" placeholder="Cantidad">
@@ -65,7 +63,7 @@
                 
                 <div style="margin-top: 2%;">
                     <div style="margin-top: 1%;">
-                    <button type="submit" class="btn btn-primary">Agreagar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
                     <a id="btn-reg" class="btn btn-danger my-2 my-sm-0" href="/pages/admin/entradas.html">Volver</a>
                 </div>
             </form>
@@ -84,8 +82,8 @@
     <script src="/js/logout.js"></script> 
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
-        //checkAuthToken();
-        //logoutFunc();
+        checkAuthToken();
+        logoutFunc();
     </script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

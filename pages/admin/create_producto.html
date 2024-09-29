@@ -53,7 +53,7 @@
                 </div>
                 <div style="margin-top: 2%;">
                 <div style="margin-top: 1%;">
-                <button type="submit" class="btn btn-primary">Agreagar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
                 <a id="btn-reg" class="btn btn-danger my-2 my-sm-0" href="/pages/admin/productos.html">Volver</a>
                 </div>
             </form>
@@ -68,12 +68,14 @@
     </footer>
 
     <!-- Cargar scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios desde un CDN -->
     <script src="/js/auth.js"></script>
     <script src="/js/logout.js"></script> 
+    <script src="/js/producto.js"></script> <!-- Tu archivo JS donde está la función -->
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
-        //checkAuthToken();
-        //logoutFunc();
+        checkAuthToken();
+        logoutFunc();
     </script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
